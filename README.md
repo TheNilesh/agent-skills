@@ -18,6 +18,44 @@ skills/
 |-------|-------------|
 | [casaos](skills/casaos/SKILL.md) | Skills for managing CasaOS home server applications |
 
-## Usage
+## Installation
 
-These skills are designed for use with [Claude Code](https://claude.ai/code) and compatible AI agent frameworks.
+Replace `<skill-name>` with the skill directory name (e.g. `casaos`).
+
+### Claude Code
+
+```bash
+npx skills add TheNilesh/agent-skills/skills/<skill-name> -g
+```
+
+Or manually:
+
+```bash
+cp -r skills/<skill-name> ~/.claude/skills/
+```
+
+### Hermes
+
+```bash
+hermes skills install TheNilesh/agent-skills/skills/<skill-name>
+```
+
+### Zeroclaw
+
+```bash
+# From a local clone
+zeroclaw skills install /path/to/agent-skills/skills/<skill-name>
+
+# From GitHub
+zeroclaw skills install https://raw.githubusercontent.com/TheNilesh/agent-skills/main/skills/<skill-name>/SKILL.md
+```
+
+### Codex
+
+Add to `~/.codex/config.toml`:
+
+```toml
+[[skills.config]]
+path = "/path/to/agent-skills/skills/<skill-name>/SKILL.md"
+enabled = true
+```
