@@ -1,0 +1,4 @@
+interface:
+  display_name: "CasaOS"
+  short_description: "Operate live CasaOS APIs, CLI, and compose apps"
+  default_prompt: "Use $casaos to operate a live CasaOS host or draft a compatible Docker Compose app."
